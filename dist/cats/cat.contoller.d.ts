@@ -1,6 +1,8 @@
 import { CatService } from './cat.service';
+import { Cat } from './interfaces/cat.interface';
 export declare class CatController {
-    private readonly appService;
-    constructor(appService: CatService);
-    getHello(): string;
+    private readonly catService;
+    constructor(catService: CatService);
+    create(cat: Cat): void;
+    findAll(): Cat[];
 }

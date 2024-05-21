@@ -9,6 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatService = void 0;
 const common_1 = require("@nestjs/common");
 let CatService = class CatService {
+    constructor() {
+        this.cats = [];
+    }
+    create(cat) {
+        this.cats.push(cat);
+    }
+    findAll() {
+        return this.cats;
+    }
     getHello() {
         return 'Hello cats!';
     }
